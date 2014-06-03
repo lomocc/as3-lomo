@@ -11,9 +11,9 @@ package cc.lomo.patterns.observer
 		{
 		}
 
-		public function addNotifyListener ( notificationName:String, notifyMethod:Function, notifyParams:Array=null) : void
+		public function addNotifyListener ( notificationName:String, notifyMethod:Function) : void
 		{
-			facade.registerObserver(notificationName, new Method(notifyMethod, notifyParams, this));
+			facade.registerObserver(notificationName, new Method(notifyMethod, null, this));
 		}
 		
 		public function removeNotifyListener( notificationName:String, notifyMethod:Function=null):void

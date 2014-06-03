@@ -118,9 +118,7 @@ package cc.lomo.patterns.observer
 				// Notify Observers from the working array				
 				for (i = 0; i < observers.length; i++) {
 					observer = observers[ i ];
-					
-					var newParams:Array = observer.params?[notification].concat(observer.params):[notification];
-					observer.excute(newParams);
+					observer.excute([notification]);
 				}
 			}
 		}
