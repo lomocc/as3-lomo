@@ -5,6 +5,9 @@
    <target-player>10.2.0</target-player>
    <swf-version>13</swf-version>
    <compiler>
+    <keep-as3-metadata>
+		<name>Inject</name>
+	</keep-as3-metadata>
      <define>
        <name>CONFIG::debug</name>
        <value>true</value>

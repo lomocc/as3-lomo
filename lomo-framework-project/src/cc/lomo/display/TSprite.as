@@ -357,7 +357,7 @@ package cc.lomo.display
 			removeFromContainer();
 //			TToolTip.unregisterComponent(this);
 			removeAllEventListener();
-			DisplayUtil.removeAllChildren(this, true);
+			removeChildren();
 		}
 		
 		/**

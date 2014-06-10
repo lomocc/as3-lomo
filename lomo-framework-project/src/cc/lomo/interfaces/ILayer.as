@@ -35,11 +35,6 @@ package cc.lomo.interfaces
 		 * 
 		 */		
 		function clear():void;
-		/**
-		 * 清除层内容 
-		 * 
-		 */		
-		function clearAndDispose():void;
 		
 		/**
 		 * 增加显示内容 

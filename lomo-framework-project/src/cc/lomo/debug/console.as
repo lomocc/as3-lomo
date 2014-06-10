@@ -21,6 +21,7 @@ package cc.lomo.debug
 				args = args.filter(function(p:*, ...args):String{return p && p.toString()});
 				ExternalInterface.call.apply(null, [type].concat(args));
 			}
+			trace.apply(null, args);
 		}
 		/**
 		 * 打印log信息 log/info/warn/error打印的文字颜色不同 (text, text, text, ..., target)

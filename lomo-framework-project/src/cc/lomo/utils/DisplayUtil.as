@@ -333,31 +333,9 @@ package cc.lomo.utils
 		//			);
 		//		}
 		/**
-		 * 删除所有子元件 
-		 * @param target 操作对象
-		 * @param recursive 是否递归删除子子子子元件
-		 * @param stopMc 子元件如果是mc 会被stop
-		 */		
-		public static function removeAllChildren(target:DisplayObjectContainer, recursive:Boolean=false, stopMc:Boolean=true):void
-		{
-			var numChildren:int = target.numChildren;
-			while(numChildren--)
-			{
-				var child:DisplayObject = target.getChildAt(numChildren);
-				if(child is DisplayObjectContainer)
-				{
-					if(recursive)
-						removeAllChildren(child as DisplayObjectContainer, true, stopMc);
-					if(stopMc && child is MovieClip)
-						(child as MovieClip).stop();
-				}
-				target.removeChild(child);
-			}
-		}
-		/**
 		 * 停止mc
 		 * @param tar
-		 * @param recursive 递归
+		 * @param recursive 递归                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
 		 * @param removeChild 是不是需要从显示列表移除
 		 */		
 		public static function stop(tar:DisplayObjectContainer, recursive:Boolean=false, removeChild:Boolean=false):void
